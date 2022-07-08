@@ -1,12 +1,12 @@
 import React, {Component} from "react";
-import { fetchData } from "services/imagesApi";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { fetchData } from "services/imagesApi";
 import {Searchbar} from "./Searchbar/Searchbar";
-import Loader from "./Loader/Loader";
 import {ImageGallery} from "./ImageGallery/ImageGallery";
 import Button from "./Button/Button";
 import { Modal } from "./Modal/Modal";
+import Loader from "./Loader/Loader";
 import s from './App.module.css';
 
 export class App extends Component {
