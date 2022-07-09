@@ -4,16 +4,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import { fetchData } from "services/imagesApi";
 import {Searchbar} from "./Searchbar/Searchbar";
 import {ImageGallery} from "./ImageGallery/ImageGallery";
-import Button from "./Button/Button";
+import { Button } from "./Button/Button";
 import { Modal } from "./Modal/Modal";
-import Loader from "./Loader/Loader";
+import { Loader } from "./Loader/Loader";
 import s from './App.module.css';
 
 export class App extends Component {
   state = {
-    imageName:'',
     imageSearch: [],
     isLoading: false,
+    imageName: '',
     error: null,
     page: 1,
     showModal: false,
@@ -66,7 +66,7 @@ fetchImages = () => {
   })
   .catch(error => this.setState({ error }))
   .finally(() => this.setState({ isLoading: false }));
-}
+};
 
   handleFormSubmit = imageName => {
     if (imageName === this.state.imageName) return;
@@ -76,7 +76,7 @@ fetchImages = () => {
       page: 1,
       error: null,
     });
-  }
+  };
 
   onLoadMore = () => {
     this.setState(({ page }) => ({

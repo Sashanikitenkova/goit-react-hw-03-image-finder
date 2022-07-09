@@ -5,7 +5,7 @@ import s from "./Searchbar.module.css";
 
 export class Searchbar extends Component {
     state = {
-        imageName:'',
+        imageName: '',
     }
 
     handleNameChange = event => {
@@ -15,7 +15,7 @@ export class Searchbar extends Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        if(this.state.imageName.trim() === '') {
+        if (this.state.imageName.trim() === '') {
             return toast("Search image name missing");
         }
 
@@ -32,12 +32,13 @@ export class Searchbar extends Component {
                 </button>
             
                 <input
-                    className={s.SearchFormInput}
                     type="text"
+                    name="imageName"
+                    value={this.state.imageName}
+                    className={s.SearchFormInput}
                     autoComplete="off"
                     autoFocus
                     placeholder="Search images and photos"
-                    value={this.state.imageName}
                     onChange={this.handleNameChange}
                 />
             </form>

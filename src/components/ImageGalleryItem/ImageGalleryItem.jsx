@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import s from './ImageGalleryItem.module.css'
 
-const ImageGalleryItem = ({id, webformatURL, largeImageURL, tags, onClick}) => {
+const ImageGalleryItem = ({ webformatURL, largeImageURL, tags, onClick}) => {
 
     return (
-                       <li key={id} onClick={() => onClick(largeImageURL)} className={s.ImageGalleryItem}>
+                       <li onClick={() => onClick(largeImageURL)} className={s.ImageGalleryItem}>
                            <img className={s.ImageGalleryItemImage} src={webformatURL} alt={tags} width="300"  />
                        </li>
     )
