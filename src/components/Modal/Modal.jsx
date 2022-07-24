@@ -15,11 +15,9 @@ export class Modal extends Component {
     }
 
     handeleKeyDown = e => {
-        window.addEventListener('keydown', e => {
             if(e.code === 'Escape') {
                 this.props.onClose();
             }
-        });
     }
 
     handeleOverlayClick = event => {
